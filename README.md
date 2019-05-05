@@ -1,21 +1,21 @@
-# RetrofitSoap(使用Retrofit请求Webservice,并解析XML转化为对象)
+## RetrofitSoap(使用Retrofit请求Webservice,并解析XML转化为对象)
 
-# SOAP协议是基于HTTP+XML，将请求内容封装成特定格式的XML；解析是将特定格式的XML装换成对象，类似GSON。
+### SOAP协议是基于HTTP+XML，将请求内容封装成特定格式的XML；解析是将特定格式的XML装换成对象，类似GSON。
 
-# 请求协议：
-POST http://www.webxml.com.cn/WebServices/WeatherWebService.asmx HTTP/1.1
-Content-Type: text/xml;charset=UTF-8
-Content-Length: 347
-SOAPAction: http://WebXml.com.cn/getWeatherbyCityName
- <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
-   <soap:Body xmlns="http://WebXml.com.cn/">
-      <getWeatherbyCityName>
-          <theCityName>合肥</theCityName>
-       </getWeatherbyCityName>
-    </soap:Body>
- </soap:Envelope>
+#### 请求协议：
+         POST http://www.webxml.com.cn/WebServices/WeatherWebService.asmx HTTP/1.1
+         Content-Type: text/xml;charset=UTF-8
+         Content-Length: 347
+         SOAPAction: http://WebXml.com.cn/getWeatherbyCityName
+         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+            <soap:Body xmlns="http://WebXml.com.cn/">
+               <getWeatherbyCityName>
+                  <theCityName>合肥</theCityName>
+               </getWeatherbyCityName>
+            </soap:Body>
+         </soap:Envelope>
 
-# 响应协议：
+#### 响应协议：
         200 OK http://www.webxml.com.cn/WebServices/WeatherWebService.asmx
         Content-Length: 3229
         Content-Type: application/soap+xml; charset=utf-8
