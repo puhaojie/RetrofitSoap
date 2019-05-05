@@ -19,7 +19,7 @@ public class Network {
     private Retrofit retrofit;
     private OkHttpClient client;
 
-    public final static String BASE_URL = "http://www.webxml.com.cn/WebServices/";
+    private final static String BASE_URL = "http://www.webxml.com.cn/WebServices/";
     private static Strategy strategy = new AnnotationStrategy();
     private static Serializer serializer = new Persister(strategy);
 
@@ -31,7 +31,7 @@ public class Network {
     private Network() {
     }
 
-    public static OkHttpClient getClient() {
+    private static OkHttpClient getClient() {
         if (instance.client != null)
             return instance.client;
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -45,7 +45,7 @@ public class Network {
     }
 
     // 构建一个Retrofit
-    public static Retrofit getRetrofit() {
+    private static Retrofit getRetrofit() {
         if (instance.retrofit != null)
             return instance.retrofit;
 

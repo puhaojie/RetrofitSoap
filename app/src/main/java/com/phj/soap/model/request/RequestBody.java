@@ -10,7 +10,6 @@ import org.simpleframework.xml.Root;
  * Created by PHJ on 2019/5/5.
  */
 
-@Root(name = "soapenv:Body")
 @NamespaceList({
         @Namespace(reference = "http://WebXml.com.cn/")
 })
